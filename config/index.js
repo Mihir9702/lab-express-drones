@@ -19,6 +19,7 @@ const path = require("path");
 
 // Middleware configuration
 module.exports = (app) => {
+
   // In development environment the app logs
   app.use(logger("dev"));
 

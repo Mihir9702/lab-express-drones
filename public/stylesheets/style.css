@@ -1,8 +1,143 @@
-body {
-  padding: 50px;
-  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Baloo Bhaijaan 2", cursive;
+  overflow-x: hidden;
 }
 
-a {
-  color: #00b7ff;
+body {
+  height: 100vh;
+  width: 100%;
+  background: #daf0ee;
 }
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+nav a:active {
+  text-decoration: underline;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-container .headers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+.header-container .headers #drone {
+  position: absolute;
+  left: 0;
+  font-size: 20px;
+}
+.header-container .headers #prop {
+  position: relative;
+  right: 23.5rem;
+  font-size: 20px;
+}
+.header-container .headers #ms {
+  position: absolute;
+  font-size: 20px;
+}
+
+.drone-list-container {
+  display: grid;
+  margin-top: 2rem;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 0.5em 0 0.5em 0;
+  border: 1px solid black;
+}
+.drone-list-container h3 {
+  justify-self: flex-start;
+}
+.drone-list-container a {
+  color: #333;
+  background: #83cafb;
+  border: none;
+  border-right: 1px solid #83cafb;
+  border-left: 1px solid #83cafb;
+  border-radius: 10px 0 10px;
+  cursor: pointer;
+  text-decoration: none;
+  width: 2.5rem;
+  padding-left: 0.25em;
+  padding: 0.25em;
+}
+.drone-list-container a:hover {
+  color: black;
+}
+.drone-list-container button {
+  color: #333;
+  background: #ff7588;
+  border: none;
+  border-right: 1px solid #ff7588;
+  border-left: 1px solid #ff7588;
+  border-radius: 10px 0 10px;
+  cursor: pointer;
+  padding: 0 0.25em;
+  height: 2.5rem;
+}
+.drone-list-container button:hover {
+  color: black;
+}
+
+.center {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form form {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em;
+  border: 1px solid #555;
+  border-radius: 12px;
+  gap: 0.5rem;
+}
+.form form input {
+  background: transparent;
+  border: 1px solid #c6caed;
+}
+.form form button {
+  cursor: pointer;
+  background: transparent;
+  padding: 0.25rem 4rem;
+  border: 1px solid #c6caed;
+  transition: 500ms background ease;
+}
+.form form button:hover {
+  background: #c6caed;
+}
+.form form button:focus {
+  background: #c6caed;
+}
+
+/*# sourceMappingURL=style.css.map */

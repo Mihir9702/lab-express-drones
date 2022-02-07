@@ -1,0 +1,19 @@
+$cyan: #daf0ee
+$ccyy: #d2f1e4
+$lav: #c6caed
+$blue: lighten(#0568ad, 40%)
+$red: lighten(#ff0022, 23%)
+
+@mixin center()
+    display: flex
+    justify-content: center
+    align-items: center
+
+@mixin button($color)
+    color: #333
+    background: $color
+    border: none
+    border-right: 1px solid $color
+    border-left: 1px solid $color
+    border-radius: 10px 0 10px
+    cursor: pointer

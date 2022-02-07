@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap')
+@import 'mixins'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-size: 16px
+    font-family: 'Baloo Bhaijaan 2', cursive
+    overflow-x: hidden
+
+body
+    height: 100vh
+    width: 100%
+    background: $cyan
+
+nav
+    @include center()
+    width: 100%
+    gap: 2rem
+    margin-bottom: 4rem
+
+    a
+        text-decoration: none
+        color: black
+
+        &:hover
+            text-decoration: underline
+        &:active
+            text-decoration: underline
+
+.header-container
+    @include center()
+    .headers
+        @include center()
+        position: relative
+        width: 100%
+        #drone
+            position: absolute
+            left: 0
+            font-size: 20px
+        #prop
+            position: relative
+            right: 23.5rem
+            font-size: 20px
+        #ms
+            position: absolute
+            font-size: 20px
+
+.drone-list-container
+    display: grid
+    margin-top: 2rem
+    place-items: center
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+    padding: .5em 0 .5em 0
+    border: 1px solid black
+
+    h3
+        justify-self: flex-start
+
+    a
+        @include button($blue)
+        text-decoration: none
+        width: 2.5rem
+        padding-left: 0.25em
+        padding: 0.25em
+
+        &:hover
+            color: black
+
+    button
+        @include button($red)
+        padding: 0 0.25em
+        height: 2.5rem
+
+        &:hover
+            color: black
+
+.center
+    text-align: center
+
+.form
+    @include center()
+
+    form
+        margin-top: 2rem
+        @include center()
+        flex-direction: column
+        padding: 1em
+        border: 1px solid #555
+        border-radius: 12px
+        gap: 0.5rem
+
+        input
+            background: transparent
+            border: 1px solid $lav
+
+        button
+            cursor: pointer
+            background: transparent
+            padding: 0.25rem 4rem
+            border: 1px solid $lav
+            transition: 500ms background ease
+
+            &:hover
+                background: $lav
+            &:focus
+                background: $lav
